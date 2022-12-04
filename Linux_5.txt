@@ -1,0 +1,329 @@
+не получилось дать имена файлам( 
+не понимаю , что не так =(
+
+
+sotov@DESKTOP-3MLH8I8 MINGW64 ~
+$ ssh -i ~/.ssh/id_rsa ec2-user@linux.telran-edu.de
+Last login: Sun Dec  4 11:57:32 2022 from p5088c3b5.dip0.t-ipconnect.de
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-33-20 ~]$ cd /opt/43_44_morning
+[ec2-user@ip-172-31-33-20 43_44_morning]$ pwd
+/opt/43_44_morning
+[ec2-user@ip-172-31-33-20 43_44_morning]$ ls
+alex                chumak          hryhorovych  paul_civic  Yuliia
+AnatoliiSidorenco   darynaTsomenko  Jan          Ruslan      zhukovska
+Anatolii_Sydorenko  eddy            Kamran       seyde
+Anita               grisha          Ndrew        shynbin
+Arthur              Horbunov        Olha         vasylkov
+[ec2-user@ip-172-31-33-20 43_44_morning]$ cd Olha
+[ec2-user@ip-172-31-33-20 Olha]$ nano script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ ls -la
+total 8
+drwxrwxr-x  2 ec2-user ec2-user   23 Dec  4 12:22 .
+drwxrwxr-x 24 ec2-user ec2-user 4096 Nov 30 08:03 ..
+-rw-rw-r--  1 ec2-user ec2-user   38 Dec  4 12:22 script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ chmod +x script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ ls -la
+total 8
+drwxrwxr-x  2 ec2-user ec2-user   23 Dec  4 12:22 .
+drwxrwxr-x 24 ec2-user ec2-user 4096 Nov 30 08:03 ..
+-rwxrwxr-x  1 ec2-user ec2-user   38 Dec  4 12:22 script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ cat script.sh
+#!/bin/bash
+date
+echo "hello world"
+
+[ec2-user@ip-172-31-33-20 Olha]$ pwd
+/opt/43_44_morning/Olha
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/script.sh
+Sun Dec  4 12:41:59 UTC 2022
+hello world
+[ec2-user@ip-172-31-33-20 Olha]$ nano nano script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/script.sh
+Sun Dec  4 13:06:02 UTC 2022
+hello Olha
+[ec2-user@ip-172-31-33-20 Olha]$ nano script.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/script.sh
+Sun Dec  4 13:33:47 UTC 2022
+hello Olha
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+[ec2-user@ip-172-31-33-20 Olha]$ pwd
+/opt/43_44_morning/Olha
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+-bash: /opt/43_44_morning/Olha/sleeper.sh: Permission denied
+[ec2-user@ip-172-31-33-20 Olha]$ ls -la
+total 12
+drwxrwxr-x 12 ec2-user ec2-user  172 Dec  4 13:58 .
+drwxrwxr-x 24 ec2-user ec2-user 4096 Nov 30 08:03 ..
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_1
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_10
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_2
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_3
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_4
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_5
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_6
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_7
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_8
+drwxrwxr-x  2 ec2-user ec2-user    6 Dec  4 13:33 dir_9
+-rwxrwxr-x  1 ec2-user ec2-user  108 Dec  4 13:33 script.sh
+-rw-rw-r--  1 ec2-user ec2-user   53 Dec  4 13:59 sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ chmod +x sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ cat sleeper.sh
+#!/bin/bash
+
+for run in {1..10}
+do
+date
+sleep 5
+done
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Sun Dec  4 14:03:35 UTC 2022
+Sun Dec  4 14:03:40 UTC 2022
+Sun Dec  4 14:03:45 UTC 2022
+Sun Dec  4 14:03:50 UTC 2022
+Sun Dec  4 14:03:55 UTC 2022
+Sun Dec  4 14:04:00 UTC 2022
+Sun Dec  4 14:04:05 UTC 2022
+Sun Dec  4 14:04:10 UTC 2022
+Sun Dec  4 14:04:15 UTC 2022
+Sun Dec  4 14:04:20 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Sun Dec  4 14:06:15 UTC 2022
+Sun Dec  4 14:06:16 UTC 2022
+Sun Dec  4 14:06:18 UTC 2022
+Sun Dec  4 14:06:19 UTC 2022
+Sun Dec  4 14:06:20 UTC 2022
+Sun Dec  4 14:06:21 UTC 2022
+Sun Dec  4 14:06:22 UTC 2022
+Sun Dec  4 14:06:23 UTC 2022
+Sun Dec  4 14:06:24 UTC 2022
+Sun Dec  4 14:06:25 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Sun Dec  4 14:10:33 UTC 2022
+Sun Dec  4 14:10:34 UTC 2022
+Sun Dec  4 14:10:35 UTC 2022
+Sun Dec  4 14:10:36 UTC 2022
+Sun Dec  4 14:10:37 UTC 2022
+Sun Dec  4 14:10:38 UTC 2022
+^[[ASun Dec  4 14:10:39 UTC 2022
+Sun Dec  4 14:10:40 UTC 2022
+Sun Dec  4 14:10:41 UTC 2022
+Sun Dec  4 14:10:42 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+NAME=Alphine Linux
+NAME
+Sun Dec  4 14:11:43 UTC 2022
+NAME
+Sun Dec  4 14:11:44 UTC 2022
+NAME
+Sun Dec  4 14:11:45 UTC 2022
+NAME
+Sun Dec  4 14:11:46 UTC 2022
+NAME
+Sun Dec  4 14:11:47 UTC 2022
+NAME
+Sun Dec  4 14:11:48 UTC 2022
+NAME
+Sun Dec  4 14:11:49 UTC 2022
+NAME
+Sun Dec  4 14:11:50 UTC 2022
+NAME
+Sun Dec  4 14:11:51 UTC 2022
+NAME
+Sun Dec  4 14:11:52 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+NAME=Alphine Linux
+
+Sun Dec  4 14:13:37 UTC 2022
+
+Sun Dec  4 14:13:38 UTC 2022
+
+Sun Dec  4 14:13:39 UTC 2022
+
+Sun Dec  4 14:13:40 UTC 2022
+
+Sun Dec  4 14:13:41 UTC 2022
+
+Sun Dec  4 14:13:42 UTC 2022
+
+Sun Dec  4 14:13:43 UTC 2022
+
+Sun Dec  4 14:13:44 UTC 2022
+
+Sun Dec  4 14:13:45 UTC 2022
+
+Sun Dec  4 14:13:46 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+/opt/43_44_morning/Olha/sleeper.sh: line 2: Linux: command not found
+hello
+Sun Dec  4 14:15:33 UTC 2022
+hello
+Sun Dec  4 14:15:34 UTC 2022
+hello
+Sun Dec  4 14:15:35 UTC 2022
+hello
+Sun Dec  4 14:15:36 UTC 2022
+hello
+Sun Dec  4 14:15:37 UTC 2022
+hello
+Sun Dec  4 14:15:38 UTC 2022
+hello
+Sun Dec  4 14:15:39 UTC 2022
+hello
+Sun Dec  4 14:15:40 UTC 2022
+hello
+Sun Dec  4 14:15:41 UTC 2022
+hello
+Sun Dec  4 14:15:42 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+/opt/43_44_morning/Olha/sleeper.sh: line 2: Linux: command not found
+
+Sun Dec  4 14:17:35 UTC 2022
+Sun Dec  4 14:17:36 UTC 2022
+Sun Dec  4 14:17:37 UTC 2022
+Sun Dec  4 14:17:38 UTC 2022
+Sun Dec  4 14:17:39 UTC 2022
+Sun Dec  4 14:17:40 UTC 2022
+Sun Dec  4 14:17:41 UTC 2022
+Sun Dec  4 14:17:42 UTC 2022
+Sun Dec  4 14:17:43 UTC 2022
+Sun Dec  4 14:17:44 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+/opt/43_44_morning/Olha/sleeper.sh: line 2: Linux: command not found
+hello
+Sun Dec  4 14:18:45 UTC 2022
+Sun Dec  4 14:18:46 UTC 2022
+Sun Dec  4 14:18:47 UTC 2022
+Sun Dec  4 14:18:48 UTC 2022
+Sun Dec  4 14:18:49 UTC 2022
+Sun Dec  4 14:18:50 UTC 2022
+Sun Dec  4 14:18:51 UTC 2022
+Sun Dec  4 14:18:52 UTC 2022
+Sun Dec  4 14:18:53 UTC 2022
+Sun Dec  4 14:18:54 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+hello Alphine
+Sun Dec  4 14:19:20 UTC 2022
+Sun Dec  4 14:19:21 UTC 2022
+Sun Dec  4 14:19:22 UTC 2022
+Sun Dec  4 14:19:23 UTC 2022
+Sun Dec  4 14:19:24 UTC 2022
+Sun Dec  4 14:19:25 UTC 2022
+Sun Dec  4 14:19:26 UTC 2022
+Sun Dec  4 14:19:27 UTC 2022
+Sun Dec  4 14:19:28 UTC 2022
+Sun Dec  4 14:19:29 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Alphine
+Sun Dec  4 14:21:24 UTC 2022
+Sun Dec  4 14:21:25 UTC 2022
+Sun Dec  4 14:21:26 UTC 2022
+Sun Dec  4 14:21:27 UTC 2022
+Sun Dec  4 14:21:28 UTC 2022
+Sun Dec  4 14:21:29 UTC 2022
+Sun Dec  4 14:21:30 UTC 2022
+Sun Dec  4 14:21:31 UTC 2022
+Sun Dec  4 14:21:32 UTC 2022
+Sun Dec  4 14:21:33 UTC 2022
+[ec2-user@ip-172-31-33-20 Olha]$ cat sleeper.sh
+#!/bin/bash
+export NAME=Alphine Linux
+
+echo "$NAME"
+
+
+for run in {1..10}
+do
+date
+# sleep 5
+sleep 1
+done
+
+for run in {50..100}
+do
+touch .txt
+done
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Alphine
+[ec2-user@ip-172-31-33-20 Olha]$ nano sleeper.sh
+[ec2-user@ip-172-31-33-20 Olha]$ /opt/43_44_morning/Olha/sleeper.sh
+Alphine
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+[ec2-user@ip-172-31-33-20 Olha]$ ls
+dir_1  dir_10  dir_2  dir_3  dir_4  dir_5  dir_6  dir_7  dir_8  dir_9  file.txt  script.sh  sleeper.sh
